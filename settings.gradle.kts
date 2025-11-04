@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "ConversorDeMoedas"
+rootProject.name = "Wallet"
 include(":app")
  

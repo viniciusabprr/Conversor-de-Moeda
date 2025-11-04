@@ -1,3 +1,19 @@
 <resources>
-    <string name="app_name">ConversorDeMoedas</string>
+    <string name="app_name">Wallet</string>
+    <string name="saldo_atual">Saldo Atual</string>
+    <string name="converter_moeda">Converter Moeda</string>
+    <string name="converter">Converter</string>
+    <string name="moeda_de_origem">Moeda de Origem</string>
+    <string name="moeda_de_destino">Moeda de Destino</string>
+    <string name="valor_a_converter">Valor a converter</string>
+    <string name="resultado_da_conversao">Resultado da Conversão:</string>
+    <string name="erro_saldo_insuficiente">Saldo insuficiente para esta transação.</string>
+    <string name="erro_api">Erro ao buscar cotação. Tente novamente.</string>
+    <string name="erro_mesma_moeda">A moeda de origem e destino não podem ser iguais.</string>
+
+    <string-array name="currencies">
+        <item>BRL</item>
+        <item>USD</item>
+        <item>BTC</item>
+    </string-array>
 </resources>
