@@ -82,6 +82,8 @@ class ActivityConverter : AppCompatActivity() {
 
                         val resultText = formatCurrency(to, convertedAmount)
                         binding.tvConversionResult.text = getString(R.string.resultado_da_conversao) + "\n" + resultText
+                        Toast.makeText(this@ActivityConverter, binding.tvConversionResult.text, Toast.LENGTH_LONG).show()
+                        finish()
 
                     }else{
                         showToast(getString(R.string.erro_api))
