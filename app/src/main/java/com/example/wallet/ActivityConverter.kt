@@ -36,6 +36,7 @@ class ActivityConverter : AppCompatActivity() {
         val fromCurrency = binding.spinnerFromCurrency.selectedItem.toString()
         val toCurrency = binding.spinnerToCurrency.selectedItem.toString()
         val amountStr = binding.etAmountToConvert.text.toString()
+        val parsableAmountStr = amountStr.replace(',', '.')
 
         if (amountStr.isBlank()) {
             binding.etAmountToConvert.error = "Insira um valor"
@@ -47,7 +48,7 @@ class ActivityConverter : AppCompatActivity() {
             return
         }
 
-        val amountToConvert = amountStr.toDoubleOrNull()
+        val amountToConvert = parsableAmountStr.toDoubleOrNull()
         if (amountToConvert == null || amountToConvert <= 0) {
             binding.etAmountToConvert.error = "Valor inválido"
             return
@@ -65,7 +66,7 @@ class ActivityConverter : AppCompatActivity() {
     private fun fetchConversionRate(from: String, to: String, amount: Double){
         setLoadingState(true)
 
-        val apiPair = "$from - $to"
+        val apiPair = "$from-$to"
 
         lifecycleScope.launch {
             try{
